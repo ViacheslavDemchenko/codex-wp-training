@@ -1,0 +1,121 @@
+:root {
+  --bg: #0f172a;
+  --panel: #111c33;
+  --text: #f8fafc;
+  --muted: #cbd5e1;
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background: radial-gradient(circle at top left, #1e3a8a 0, transparent 32rem), var(--bg);
+}
+
+header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+header h1 {
+  max-width: 900px;
+  margin: 0 0 1rem;
+  font-size: clamp(3rem, 9vw, 6.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.06em;
+}
+
+header p {
+  max-width: 620px;
+  margin: 0 0 2rem;
+  font-size: 1.25rem;
+  color: var(--muted);
+}
+
+header a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3.25rem;
+  padding: 0.9rem 1.7rem;
+  border-radius: 999px;
+  color: #ffffff;
+  background: var(--accent);
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 1rem 2rem rgba(37, 99, 235, 0.35);
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+header a:hover,
+header a:focus-visible {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 1.2rem 2.4rem rgba(37, 99, 235, 0.45);
+}
+
+section {
+  width: min(1100px, calc(100% - 3rem));
+  margin: 0 auto 4rem;
+  padding: 4rem;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 2rem;
+  background: rgba(17, 28, 51, 0.82);
+  box-shadow: 0 1.5rem 4rem rgba(2, 6, 23, 0.28);
+}
+
+section h2 {
+  margin: 0 0 1rem;
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  line-height: 1.15;
+}
+
+section p {
+  max-width: 680px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  header {
+    min-height: 100svh;
+    padding: 3rem 1rem;
+  }
+
+  header h1 {
+    font-size: clamp(2.5rem, 14vw, 4.25rem);
+  }
+
+  header p {
+    font-size: 1.05rem;
+  }
+
+  header a {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  section {
+    width: min(100% - 2rem, 1100px);
+    margin-bottom: 2rem;
+    padding: 2rem 1.25rem;
+    border-radius: 1.4rem;
+  }
+}
